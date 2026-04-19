@@ -5,25 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-      body{
-        margin: 0;
+      #myButton{
+        font-size: 4rem;
+        margin: 10px;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        /* background-color: hsl(205, 100%, 60%); */
+        /* color: white; */
       }
+      .enabled{
+        background-color: rgb(176, 2, 2);
+        color: rgb(252, 0, 0);
 
-      #myBox{
-        background-color: rgb(2, 125, 233);
-        width: 200px;
-        height: 200px;
-        font-size: 7.5rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
+      }
+      .hover{
+        box-shadow: 0 0 10px greenyellow;
+        font-weight: bold;
       }
     </style>
 </head>
 <body>
-  <div id="myBox">??</div>
+  <button id="myButton">Touch Me !!!!</button>
+  
 
-    <script src="hideorshow.jss"></script>
+    <script src="classlist.js"></script>
 </body>
 </html>

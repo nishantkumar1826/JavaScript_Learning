@@ -5,30 +5,37 @@
 //                  Now we, Use Promises + async/await to avoid Calllback Hell
 
 // Example 01
-function task1(){
+function task1(calllback){
     setTimeout(() => {
         console.log("Task 1 complete")
+        calllback();
     }, 2000)
 }    
-function task2(){
+function task2(callback){
     setTimeout(() => {
         console.log("Task 2 complete")
-    },3000)
+        callback();
+    },1000)
 }    
-function task3(){
+function task3(callback){
     setTimeout(() => {
         console.log("Task 3 complete")
-    }, 4000)
+        callback();
+    }, 3000)
 }    
-function task4(){
+function task4(callback){
     setTimeout(() => {
         console.log("Task 4 complete")
-    }, 5000)
+        callback()
+    }, 3500)
 }    
 
 
-task1();
-task2();
-task3();
-task4();
-console.log("All task are underway");
+// to print in order using a callback
+task1(() =>{
+    task2(() => {
+        task3(() => {
+            task4(() => console.log("All tasks are complete"))
+        })
+    });
+})

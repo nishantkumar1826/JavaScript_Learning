@@ -15,5 +15,5 @@ fetch("https://pokeapi.co/api/v2/pokemon/ditto")
     .then(data => console.log(data.weight))
     .catch(error => console.error(error));
 
-    //Finalli javascript ended successfully
+    //Finally javascript ended successfully
     
